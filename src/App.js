@@ -1,4 +1,5 @@
 import Expenses from './components/Expenses/Expenses';
+import NevExpense from './components/NevExpense/NevExpense';
 
 function App() {
   const expenses = [
@@ -23,9 +24,14 @@ function App() {
       },
     ];
 
+    const addExpenseHandler = expense => {
+      console.log('In App.js');
+      console.log(expense);
+    }
+
   return (
     <div>
-      <h1>hello</h1>
+      <NevExpense onAddExpense={addExpenseHandler }/>
       <Expenses items={expenses}/>
     </div>
   );
